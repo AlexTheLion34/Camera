@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "container:"
+      name = "PractiseDiary">
+      <FileRef
+         location = "group:Diary.md">
+      </FileRef>
+   </Group>
    <FileRef
       location = "group:Camera.xcodeproj">
    </FileRef>

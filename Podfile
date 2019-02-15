@@ -5,4 +5,5 @@ target 'Camera' do
   pod 'Alamofire'
   pod 'AlamofireImage', '~> 3.1'
   pod 'MobileVLCKit'
+  pod 'RealmSwift'
 end

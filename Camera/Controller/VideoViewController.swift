@@ -8,23 +8,48 @@
 
 import UIKit
 
-class VideoViewController: UIViewController {
+class VideoViewController: UIViewController, VLCMediaPlayerDelegate {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var videoView: UIView!
+    
+    let streamURL = URL(string: "http://158.58.130.148/axis-cgi/mjpg/video.cgi")
+    
+    private let player: VLCMediaPlayer = VLCMediaPlayer()
+    
+    private func checkOrientation() {
+        if UIDevice.current.orientation.isLandscape {
+            self.navigationController?.navigationBar.isHidden = true
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setupPlayer() {
+        let media = VLCMedia(url: streamURL!)
+        
+        player.media = media
+        player.delegate = self
+        player.drawable = videoView
+        player.play()
     }
-    */
+}
 
+extension VideoViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.backgroundColor = .black
+        checkOrientation()
+        setupPlayer()
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        if UIDevice.current.orientation.isLandscape {
+            self.navigationController?.navigationBar.isHidden = true
+        } else {
+            self.navigationController?.navigationBar.isHidden = false
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        player.stop()
+    }
 }

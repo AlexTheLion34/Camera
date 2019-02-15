@@ -2,20 +2,24 @@ PODS:
   - Alamofire (4.8.1)
   - AlamofireImage (3.5.0):
     - Alamofire (~> 4.8)
+  - MobileVLCKit (3.2.0)
 
 DEPENDENCIES:
   - Alamofire
   - AlamofireImage (~> 3.1)
+  - MobileVLCKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - AlamofireImage
+    - MobileVLCKit
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   AlamofireImage: 1aea346f4dda2f6c67622fa5a89fcbb80d79cc16
+  MobileVLCKit: f7af7d6bee693b904265768eaae6a0ed29fdcd65
 
-PODFILE CHECKSUM: 4726393aa137f110406fcff998b37895e83c9434
+PODFILE CHECKSUM: 296c71fc47a76ab705585ce4eb3fce60a123c17b
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.6.0

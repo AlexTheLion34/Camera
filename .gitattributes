@@ -1,0 +1,2 @@
+Pods/MobileVLCKit/MobileVLCKit.framework/MobileVLCKit filter=lfs diff=lfs merge=lfs -text
+Pods/MobileVLCKit/ filter=lfs diff=lfs merge=lfs -text

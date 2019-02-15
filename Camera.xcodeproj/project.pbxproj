@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		61691D5F220B075400512931 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61691D5E220B075400512931 /* AppDelegate.swift */; };
-		61691D64220B075400512931 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61691D62220B075400512931 /* Main.storyboard */; };
-		61691D66220B075600512931 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61691D65220B075600512931 /* Assets.xcassets */; };
 		61691D69220B075600512931 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61691D67220B075600512931 /* LaunchScreen.storyboard */; };
+		616AFFA5220E0DAF00B603CB /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616AFFA4220E0DAF00B603CB /* VideoViewController.swift */; };
+		616AFFA8220E0EF000B603CB /* header.m in Sources */ = {isa = PBXBuildFile; fileRef = 616AFFA7220E0EF000B603CB /* header.m */; };
 		616B666E220CDE4300599C0B /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616B666D220CDE4300599C0B /* ImageTableViewCell.swift */; };
-		616B6670220CEFDA00599C0B /* ImageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616B666F220CEFDA00599C0B /* ImageTableViewController.swift */; };
-		618735A7220B976B00112874 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618735A6220B976B00112874 /* Post.swift */; };
+		61770E4E2214CEB500E6641D /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61770E4D2214CEB500E6641D /* StartViewController.swift */; };
+		61770E532214E19600E6641D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61770E512214E19600E6641D /* Main.storyboard */; };
+		61770E592214F38400E6641D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61770E582214F38400E6641D /* Assets.xcassets */; };
 		DCA73C8AE7793683964A0BFA /* Pods_Camera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4BFD10D4A741AB0B9E2D068 /* Pods_Camera.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,13 +22,17 @@
 		4312963BF3724F1FCB39099B /* Pods-Camera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camera.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Camera/Pods-Camera.debug.xcconfig"; sourceTree = "<group>"; };
 		61691D5B220B075400512931 /* Camera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Camera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61691D5E220B075400512931 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		61691D63220B075400512931 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		61691D65220B075600512931 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61691D68220B075600512931 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61691D6A220B075600512931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		616AFFA4220E0DAF00B603CB /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		616AFFA6220E0EEF00B603CB /* Camera-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Camera-Bridging-Header.h"; sourceTree = "<group>"; };
+		616AFFA7220E0EF000B603CB /* header.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = header.m; sourceTree = "<group>"; };
 		616B666D220CDE4300599C0B /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
-		616B666F220CEFDA00599C0B /* ImageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewController.swift; sourceTree = "<group>"; };
-		618735A6220B976B00112874 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		61770E4D2214CEB500E6641D /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		61770E522214E19600E6641D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		61770E582214F38400E6641D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6189455E220E145200F90665 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		61894560220E147900F90665 /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
 		7FF6BC2A92905387193483FC /* Pods-Camera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camera.release.xcconfig"; path = "Pods/Target Support Files/Pods-Camera/Pods-Camera.release.xcconfig"; sourceTree = "<group>"; };
 		E4BFD10D4A741AB0B9E2D068 /* Pods_Camera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Camera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -71,6 +76,9 @@
 				616B666A220C808900599C0B /* Service */,
 				618735A5220B8F1F00112874 /* View */,
 				616B666D220CDE4300599C0B /* ImageTableViewCell.swift */,
+				61691D6A220B075600512931 /* Info.plist */,
+				616AFFA7220E0EF000B603CB /* header.m */,
+				616AFFA6220E0EEF00B603CB /* Camera-Bridging-Header.h */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
@@ -85,7 +93,8 @@
 		618735A4220B8F0600112874 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				616B666F220CEFDA00599C0B /* ImageTableViewController.swift */,
+				61770E4D2214CEB500E6641D /* StartViewController.swift */,
+				616AFFA4220E0DAF00B603CB /* VideoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -93,7 +102,7 @@
 		618735A5220B8F1F00112874 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				61691D62220B075400512931 /* Main.storyboard */,
+				61770E512214E19600E6641D /* Main.storyboard */,
 				61691D67220B075600512931 /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -102,7 +111,6 @@
 		618735A8220B977400112874 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				618735A6220B976B00112874 /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -110,9 +118,8 @@
 		61BD71B3220D074B007C8A85 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				61770E582214F38400E6641D /* Assets.xcassets */,
 				61691D5E220B075400512931 /* AppDelegate.swift */,
-				61691D65220B075600512931 /* Assets.xcassets */,
-				61691D6A220B075600512931 /* Info.plist */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -129,6 +136,8 @@
 		B5CF93B17AA862D707C19715 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				61894560220E147900F90665 /* libc++.1.tbd */,
+				6189455E220E145200F90665 /* libc++.tbd */,
 				E4BFD10D4A741AB0B9E2D068 /* Pods_Camera.framework */,
 			);
 			name = Frameworks;
@@ -168,6 +177,7 @@
 				TargetAttributes = {
 					61691D5A220B075400512931 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -195,8 +205,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				61691D69220B075600512931 /* LaunchScreen.storyboard in Resources */,
-				61691D66220B075600512931 /* Assets.xcassets in Resources */,
-				61691D64220B075400512931 /* Main.storyboard in Resources */,
+				61770E592214F38400E6641D /* Assets.xcassets in Resources */,
+				61770E532214E19600E6641D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,7 +237,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Camera/Pods-Camera-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Camera/Pods-Camera-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 			);
@@ -238,7 +248,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Camera/Pods-Camera-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Camera/Pods-Camera-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -248,9 +258,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61770E4E2214CEB500E6641D /* StartViewController.swift in Sources */,
+				616AFFA8220E0EF000B603CB /* header.m in Sources */,
 				616B666E220CDE4300599C0B /* ImageTableViewCell.swift in Sources */,
-				616B6670220CEFDA00599C0B /* ImageTableViewController.swift in Sources */,
-				618735A7220B976B00112874 /* Post.swift in Sources */,
+				616AFFA5220E0DAF00B603CB /* VideoViewController.swift in Sources */,
 				61691D5F220B075400512931 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,20 +269,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		61691D62220B075400512931 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				61691D63220B075400512931 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		61691D67220B075600512931 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				61691D68220B075600512931 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		61770E512214E19600E6641D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				61770E522214E19600E6641D /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -398,8 +409,10 @@
 			baseConfigurationReference = 4312963BF3724F1FCB39099B /* Pods-Camera.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F2JUAKBR98;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Camera/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -408,6 +421,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "AlexTheLion-Co.Camera";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Camera/Camera-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -418,8 +433,10 @@
 			baseConfigurationReference = 7FF6BC2A92905387193483FC /* Pods-Camera.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F2JUAKBR98;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Camera/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -428,6 +445,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "AlexTheLion-Co.Camera";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Camera/Camera-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

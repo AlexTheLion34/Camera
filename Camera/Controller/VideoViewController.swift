@@ -22,6 +22,10 @@ class VideoViewController: UIViewController, VLCMediaPlayerDelegate {
         }
     }
     
+    private func setupNavigationBar() {
+        navigationController?.navigationBar.topItem?.title = ""
+    }
+    
     private func setupPlayer() {
         let media = VLCMedia(url: streamURL!)
         
@@ -38,6 +42,7 @@ extension VideoViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .black
         checkOrientation()
+        setupNavigationBar()
         setupPlayer()
     }
     

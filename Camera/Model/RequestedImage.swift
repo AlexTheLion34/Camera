@@ -6,10 +6,18 @@
 //  Copyright © 2019 Alexey Petrenko. All rights reserved.
 //
 
-import RealmSwift
+// implement it later
+//import RealmSwift
 
-class Image: Object {
+class RequestedImage {
     
-    var ip: String = ""
+    // hardcoced just for now
+    let ip: String = "158.58.130.148"
+    var date: String
+    var image: UIImage
     
+    init(date: String, image: UIImage) {
+        self.date = date
+        self.image = image
+    }
 }

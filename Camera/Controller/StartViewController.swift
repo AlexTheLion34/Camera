@@ -12,8 +12,9 @@ class StartViewController: UIViewController {
     
     private func setupNavigationBar() {
         navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.barTintColor = UIColor.blue
+        navigationController?.navigationBar.barTintColor = UIColor(displayP3Red: 21 / 255, green: 101 / 255, blue: 192 / 255, alpha: 1)
         navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.topItem?.title = ""
     }
 }
 

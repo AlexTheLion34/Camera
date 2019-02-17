@@ -3,23 +3,33 @@ PODS:
   - AlamofireImage (3.5.0):
     - Alamofire (~> 4.8)
   - MobileVLCKit (3.2.0)
+  - Realm (3.13.1):
+    - Realm/Headers (= 3.13.1)
+  - Realm/Headers (3.13.1)
+  - RealmSwift (3.13.1):
+    - Realm (= 3.13.1)
 
 DEPENDENCIES:
   - Alamofire
   - AlamofireImage (~> 3.1)
   - MobileVLCKit
+  - RealmSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - AlamofireImage
     - MobileVLCKit
+    - Realm
+    - RealmSwift
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   AlamofireImage: 1aea346f4dda2f6c67622fa5a89fcbb80d79cc16
   MobileVLCKit: f7af7d6bee693b904265768eaae6a0ed29fdcd65
+  Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
+  RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
 
-PODFILE CHECKSUM: 296c71fc47a76ab705585ce4eb3fce60a123c17b
+PODFILE CHECKSUM: 1bc923532d4fb0d64afc642749316a78ba93671d
 
 COCOAPODS: 1.6.0

@@ -8,13 +8,12 @@
 
 import UIKit
 
-class VideoViewController: UIViewController, VLCMediaPlayerDelegate {
+class VideoViewController: UIViewController {
 
     @IBOutlet weak var videoView: UIView!
     
-    let streamURL = URL(string: "http://158.58.130.148/axis-cgi/mjpg/video.cgi")
-    
-    private let player: VLCMediaPlayer = VLCMediaPlayer()
+    private var videoProvider: VideoProvider { return .provider }
+    private var videManager: VideoManager { return .manager }
     
     private func checkOrientation() {
         if UIDevice.current.orientation.isLandscape {
@@ -22,13 +21,8 @@ class VideoViewController: UIViewController, VLCMediaPlayerDelegate {
         }
     }
     
-    private func setupPlayer() {
-        let media = VLCMedia(url: streamURL!)
-        
-        player.media = media
-        player.delegate = self
-        player.drawable = videoView
-        player.play()
+    private func setupNavigationBar() {
+        navigationController?.navigationBar.topItem?.title = ""
     }
 }
 
@@ -38,7 +32,8 @@ extension VideoViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .black
         checkOrientation()
-        setupPlayer()
+        setupNavigationBar()
+        videoProvider.configurePlayer(withView: videoView)
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -50,6 +45,6 @@ extension VideoViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        player.stop()
+        videManager.player.stop()
     }
 }

@@ -35,45 +35,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="90" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Dn-mM-11o">
-                                <rect key="frame" x="62.666666666666657" y="383.66666666666669" width="249.99999999999997" height="138.66666666666669"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YSD-K7-HMh">
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter IP" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="6jb-Ul-iYa">
-                                        <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
-                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4HG-CH-DSy">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="690"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wig-sv-ouY">
+                                                <rect key="frame" x="137.66666666666666" y="348.33333333333331" width="100" height="50"/>
+                                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Wig-sv-ouY" secondAttribute="height" multiplier="2:1" id="IGW-bO-TWU"/>
+                                                    <constraint firstAttribute="height" constant="50" id="Jfr-CW-v6x"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="xUl-MD-fPO"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
+                                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Start"/>
+                                                <connections>
+                                                    <action selector="startButtonPressed:" destination="5IQ-sY-wEh" eventType="touchUpInside" id="hIq-gR-fku"/>
+                                                    <segue destination="nwQ-pv-QAu" kind="show" id="b3v-a9-brJ"/>
+                                                </connections>
+                                            </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter IP" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vig-UO-C1L">
+                                                <rect key="frame" x="61" y="291" width="253" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="253" id="G7F-Iw-uSY"/>
+                                                    <constraint firstAttribute="width" secondItem="vig-UO-C1L" secondAttribute="height" multiplier="23:4" id="PJb-zc-tot"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="6jb-Ul-iYa" secondAttribute="height" multiplier="5:1" id="JWV-E8-5jl"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="n0q-iR-FzD"/>
+                                            <constraint firstItem="vig-UO-C1L" firstAttribute="centerY" secondItem="4HG-CH-DSy" secondAttribute="centerY" constant="-32" id="4Ic-mT-1Xg"/>
+                                            <constraint firstItem="vig-UO-C1L" firstAttribute="centerX" secondItem="4HG-CH-DSy" secondAttribute="centerX" id="5c9-2h-tU3"/>
+                                            <constraint firstItem="Wig-sv-ouY" firstAttribute="centerX" secondItem="vig-UO-C1L" secondAttribute="centerX" id="5yH-Zx-QYN"/>
+                                            <constraint firstItem="Wig-sv-ouY" firstAttribute="top" secondItem="vig-UO-C1L" secondAttribute="bottom" constant="13.333333333333314" id="z3G-hf-umd"/>
                                         </constraints>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="21"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjY-6h-AEn">
-                                        <rect key="frame" x="75" y="88.666666666666629" width="100" height="50"/>
-                                        <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="06V-LN-Ba4"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
-                                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Start"/>
-                                        <connections>
-                                            <segue destination="nwQ-pv-QAu" kind="show" id="cWp-W0-OEI"/>
-                                        </connections>
-                                    </button>
+                                    </view>
                                 </subviews>
-                            </stackView>
+                                <constraints>
+                                    <constraint firstItem="4HG-CH-DSy" firstAttribute="centerX" secondItem="YSD-K7-HMh" secondAttribute="centerX" id="130-Qe-lVD"/>
+                                    <constraint firstItem="4HG-CH-DSy" firstAttribute="centerY" secondItem="YSD-K7-HMh" secondAttribute="centerY" id="PFx-7v-7Hq"/>
+                                    <constraint firstAttribute="trailing" secondItem="4HG-CH-DSy" secondAttribute="trailing" id="Wp9-Dt-Orv"/>
+                                    <constraint firstItem="4HG-CH-DSy" firstAttribute="leading" secondItem="YSD-K7-HMh" secondAttribute="leading" id="ejE-JO-pac"/>
+                                    <constraint firstAttribute="bottom" secondItem="4HG-CH-DSy" secondAttribute="bottom" id="hrC-jG-1uq"/>
+                                    <constraint firstItem="4HG-CH-DSy" firstAttribute="top" secondItem="YSD-K7-HMh" secondAttribute="top" id="vy6-Jz-szn"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="1Dn-mM-11o" firstAttribute="centerX" secondItem="bZk-6v-qRd" secondAttribute="centerX" id="pEQ-SL-tNA"/>
-                            <constraint firstItem="1Dn-mM-11o" firstAttribute="centerY" secondItem="bZk-6v-qRd" secondAttribute="centerY" constant="19.833333333333371" id="sfZ-yf-loT"/>
+                            <constraint firstItem="YSD-K7-HMh" firstAttribute="bottom" secondItem="bZk-6v-qRd" secondAttribute="bottom" id="17d-gS-2T2"/>
+                            <constraint firstItem="YSD-K7-HMh" firstAttribute="trailing" secondItem="bZk-6v-qRd" secondAttribute="trailing" id="4ti-i3-XVY"/>
+                            <constraint firstItem="YSD-K7-HMh" firstAttribute="top" secondItem="bZk-6v-qRd" secondAttribute="top" id="Zoj-Yq-FIi"/>
+                            <constraint firstItem="YSD-K7-HMh" firstAttribute="leading" secondItem="bZk-6v-qRd" secondAttribute="leading" id="w9U-AK-RlW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bZk-6v-qRd"/>
                     </view>
                     <navigationItem key="navigationItem" id="V8g-vd-YN9"/>
+                    <connections>
+                        <outlet property="ipTextField" destination="vig-UO-C1L" id="vMy-Xg-meb"/>
+                        <outlet property="scrollView" destination="YSD-K7-HMh" id="lvF-qr-DgP"/>
+                        <outlet property="startButton" destination="Wig-sv-ouY" id="czb-XK-va0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ttw-n4-pNW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -200,11 +227,11 @@
             <objects>
                 <viewController id="Kwf-Pi-oHC" customClass="VideoViewController" customModule="Camera" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g8y-JK-JIF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h1W-Lz-oG1">
-                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>

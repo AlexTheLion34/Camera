@@ -35,10 +35,10 @@ extension StartViewController {
     
     private func setupNavigationBar() {
         navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.barTintColor = UIColor(displayP3Red: 21 / 255, green: 101 / 255, blue: 192 / 255, alpha: 1)
+        navigationController?.navigationBar.barTintColor = Colors.barColor.value
+        navigationController?.navigationBar.topItem?.title = BarTitles.setup.rawValue
         navigationController?.navigationBar.tintColor = .white
         navigationController?.navigationBar.barStyle = .black
-        navigationController?.navigationBar.topItem?.title = "Setup"
     }
 }
 

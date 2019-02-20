@@ -8,14 +8,7 @@
 
 import UIKit
 
-enum Labels: String {
-    case ip = "IP: "
-    case date = "Date/Time: "
-}
-
 class ImageProvider: NSObject {
-    
-    private let cellIdentifier = "ImageCell"
     
     static let provider = ImageProvider()
     
@@ -30,7 +23,7 @@ extension ImageProvider: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ImageTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.imageCell.rawValue, for: indexPath) as! ImageTableViewCell
         if (imageManager.images.count != 0) {
             cell.jpgImageView.image = imageManager.images[indexPath.row].image
             cell.ipLabel.text = Labels.ip.rawValue + imageManager.images[indexPath.row].ip

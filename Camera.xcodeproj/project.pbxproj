@@ -21,6 +21,9 @@
 		61AD9D7F221839CB00B16A85 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AD9D7E221839CB00B16A85 /* ImageManager.swift */; };
 		61AD9D842219FC4300B16A85 /* VideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AD9D832219FC4300B16A85 /* VideoManager.swift */; };
 		61AD9D862219FEE000B16A85 /* VideoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AD9D852219FEE000B16A85 /* VideoProvider.swift */; };
+		61AD9D89221E084E00B16A85 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AD9D88221E084E00B16A85 /* Styles.swift */; };
+		61AD9D8B221E0BC700B16A85 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AD9D8A221E0BC700B16A85 /* Extensions.swift */; };
+		61AD9D8E221E0E4000B16A85 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AD9D8D221E0E4000B16A85 /* CustomButton.swift */; };
 		DCA73C8AE7793683964A0BFA /* Pods_Camera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4BFD10D4A741AB0B9E2D068 /* Pods_Camera.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +48,9 @@
 		61AD9D7E221839CB00B16A85 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		61AD9D832219FC4300B16A85 /* VideoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoManager.swift; sourceTree = "<group>"; };
 		61AD9D852219FEE000B16A85 /* VideoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoProvider.swift; sourceTree = "<group>"; };
+		61AD9D88221E084E00B16A85 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		61AD9D8A221E0BC700B16A85 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		61AD9D8D221E0E4000B16A85 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		7FF6BC2A92905387193483FC /* Pods-Camera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camera.release.xcconfig"; path = "Pods/Target Support Files/Pods-Camera/Pods-Camera.release.xcconfig"; sourceTree = "<group>"; };
 		E4BFD10D4A741AB0B9E2D068 /* Pods_Camera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Camera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -143,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				61AD9D7D22178C5C00B16A85 /* Cell */,
+				61AD9D8C221E0E1800B16A85 /* Button */,
 			);
 			path = SubView;
 			sourceTree = "<group>";
@@ -165,9 +172,27 @@
 			path = Video;
 			sourceTree = "<group>";
 		};
+		61AD9D87221E083200B16A85 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				61AD9D88221E084E00B16A85 /* Styles.swift */,
+				61AD9D8A221E0BC700B16A85 /* Extensions.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		61AD9D8C221E0E1800B16A85 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				61AD9D8D221E0E4000B16A85 /* CustomButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
 		61BD71B3220D074B007C8A85 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				61AD9D87221E083200B16A85 /* Styles */,
 				61770E582214F38400E6641D /* Assets.xcassets */,
 				61691D5E220B075400512931 /* AppDelegate.swift */,
 			);
@@ -315,10 +340,13 @@
 				61AD9D862219FEE000B16A85 /* VideoProvider.swift in Sources */,
 				61AD9D7A2217849B00B16A85 /* RequestedImage.swift in Sources */,
 				61770E4E2214CEB500E6641D /* StartViewController.swift in Sources */,
+				61AD9D89221E084E00B16A85 /* Styles.swift in Sources */,
+				61AD9D8E221E0E4000B16A85 /* CustomButton.swift in Sources */,
 				61AD9D782217775E00B16A85 /* ImageTableViewController.swift in Sources */,
 				61AD9D7F221839CB00B16A85 /* ImageManager.swift in Sources */,
 				616AFFA8220E0EF000B603CB /* header.m in Sources */,
 				61AD9D7C2217857700B16A85 /* ImageProvider.swift in Sources */,
+				61AD9D8B221E0BC700B16A85 /* Extensions.swift in Sources */,
 				616B666E220CDE4300599C0B /* ImageTableViewCell.swift in Sources */,
 				61AD9D842219FC4300B16A85 /* VideoManager.swift in Sources */,
 				616AFFA5220E0DAF00B603CB /* VideoViewController.swift in Sources */,

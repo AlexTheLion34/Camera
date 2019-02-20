@@ -22,7 +22,7 @@ class ImageTableViewCell: UITableViewCell {
         super.awakeFromNib()
         cardImageView.layer.cornerRadius = 3.0
         cardImageView.layer.masksToBounds = false
-        cardImageView.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
+        cardImageView.layer.shadowColor = Colors.imageCellBackgroundColor.value.cgColor
         cardImageView.layer.shadowOffset = CGSize(width: 0, height: 0)
         cardImageView.layer.shadowOpacity = 0.8
     }

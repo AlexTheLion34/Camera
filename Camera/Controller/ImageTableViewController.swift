@@ -15,7 +15,7 @@ class ImageTableViewController: UITableViewController {
     
     private func configureTableView() {
         self.tableView.separatorStyle = .none
-        self.tableView.backgroundColor = UIColor(displayP3Red: 240 / 255.0, green: 240 / 255.0, blue: 240 / 255.0, alpha: 1)
+        self.tableView.backgroundColor = Colors.tableViewBackgroundColor.value
     }
     
     @objc private func addButtonPressed() {

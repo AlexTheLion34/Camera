@@ -16,5 +16,4 @@ class CustomTextField: UITextField {
         self.layer.cornerRadius = 5
         self.layer.masksToBounds = false
     }
-
 }

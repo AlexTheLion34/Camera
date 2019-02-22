@@ -26,6 +26,7 @@
 		61AD9D8E221E0E4000B16A85 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AD9D8D221E0E4000B16A85 /* MainButton.swift */; };
 		61BDE9EC22204C71007A6ED0 /* UseIpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BDE9EB22204C71007A6ED0 /* UseIpButton.swift */; };
 		61BDE9EF2220512E007A6ED0 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BDE9EE2220512E007A6ED0 /* CustomTextField.swift */; };
+		61BDE9F12220BFBF007A6ED0 /* IpReciever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BDE9F02220BFBF007A6ED0 /* IpReciever.swift */; };
 		DCA73C8AE7793683964A0BFA /* Pods_Camera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4BFD10D4A741AB0B9E2D068 /* Pods_Camera.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		61AD9D8D221E0E4000B16A85 /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		61BDE9EB22204C71007A6ED0 /* UseIpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseIpButton.swift; sourceTree = "<group>"; };
 		61BDE9EE2220512E007A6ED0 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		61BDE9F02220BFBF007A6ED0 /* IpReciever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IpReciever.swift; sourceTree = "<group>"; };
 		7FF6BC2A92905387193483FC /* Pods-Camera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camera.release.xcconfig"; path = "Pods/Target Support Files/Pods-Camera/Pods-Camera.release.xcconfig"; sourceTree = "<group>"; };
 		E4BFD10D4A741AB0B9E2D068 /* Pods_Camera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Camera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -110,6 +112,7 @@
 			children = (
 				61AD9D812219FB5B00B16A85 /* Image */,
 				61AD9D822219FB8100B16A85 /* Video */,
+				61BDE9F02220BFBF007A6ED0 /* IpReciever.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				61770E4E2214CEB500E6641D /* StartViewController.swift in Sources */,
 				61AD9D89221E084E00B16A85 /* Styles.swift in Sources */,
 				61BDE9EF2220512E007A6ED0 /* CustomTextField.swift in Sources */,
+				61BDE9F12220BFBF007A6ED0 /* IpReciever.swift in Sources */,
 				61AD9D8E221E0E4000B16A85 /* MainButton.swift in Sources */,
 				61AD9D782217775E00B16A85 /* ImageTableViewController.swift in Sources */,
 				61AD9D7F221839CB00B16A85 /* ImageManager.swift in Sources */,

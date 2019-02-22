@@ -11,12 +11,12 @@
 
 class RequestedImage {
     
-    // hardcoced just for now
-    let ip: String = "158.58.130.148"
+    let ip: String
     var date: String
     var image: UIImage
     
-    init(date: String, image: UIImage) {
+    init(ip: String, date: String, image: UIImage) {
+        self.ip = ip
         self.date = date
         self.image = image
     }

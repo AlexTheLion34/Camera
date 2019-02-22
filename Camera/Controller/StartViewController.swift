@@ -14,11 +14,18 @@ class StartViewController: UIViewController {
     @IBOutlet weak var ipTextField: UITextField!
     @IBOutlet weak var startButton: UIButton!
     
+    private var imageManager: ImageManager { return .manager }
+    private var videManager: VideoManager { return .manager }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
         setupTextField()
         registerForKeyboardNotifications()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        startButton.isEnabled = false
     }
     
     deinit {
@@ -27,6 +34,8 @@ class StartViewController: UIViewController {
     
     @IBAction func useButtonPressed(_ sender: UIButton) {
         if ipTextField.text != "" {
+            imageManager.recieveIp(recievedIp: ipTextField.text!)
+            videManager.recieveIp(recievedIp: ipTextField.text!)
             startButton.isEnabled = true
         }
     }

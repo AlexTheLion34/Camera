@@ -25,8 +25,10 @@ class StartViewController: UIViewController {
         removeKeyboardNotifications()
     }
     
-    @IBAction func startButtonPressed(_ sender: UIButton) {
-        
+    @IBAction func useButtonPressed(_ sender: UIButton) {
+        if ipTextField.text != "" {
+            startButton.isEnabled = true
+        }
     }
 }
 
@@ -71,16 +73,11 @@ extension StartViewController: UITextFieldDelegate {
     
     private func setupTextField() {
         ipTextField.delegate = self
-        ipTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingDidEnd)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
-    }
-    
-    @objc private func textFieldDidChange(_ textField: UITextField) {
-        startButton.isEnabled = true
     }
 }
 

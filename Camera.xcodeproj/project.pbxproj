@@ -25,6 +25,7 @@
 		61AD9D8B221E0BC700B16A85 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AD9D8A221E0BC700B16A85 /* Extensions.swift */; };
 		61AD9D8E221E0E4000B16A85 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AD9D8D221E0E4000B16A85 /* MainButton.swift */; };
 		61BDE9EC22204C71007A6ED0 /* UseIpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BDE9EB22204C71007A6ED0 /* UseIpButton.swift */; };
+		61BDE9EF2220512E007A6ED0 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BDE9EE2220512E007A6ED0 /* CustomTextField.swift */; };
 		DCA73C8AE7793683964A0BFA /* Pods_Camera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4BFD10D4A741AB0B9E2D068 /* Pods_Camera.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		61AD9D8A221E0BC700B16A85 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		61AD9D8D221E0E4000B16A85 /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		61BDE9EB22204C71007A6ED0 /* UseIpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseIpButton.swift; sourceTree = "<group>"; };
+		61BDE9EE2220512E007A6ED0 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		7FF6BC2A92905387193483FC /* Pods-Camera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camera.release.xcconfig"; path = "Pods/Target Support Files/Pods-Camera/Pods-Camera.release.xcconfig"; sourceTree = "<group>"; };
 		E4BFD10D4A741AB0B9E2D068 /* Pods_Camera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Camera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -152,6 +154,7 @@
 			children = (
 				61AD9D7D22178C5C00B16A85 /* Cell */,
 				61AD9D8C221E0E1800B16A85 /* Button */,
+				61BDE9ED222050EC007A6ED0 /* TextField */,
 			);
 			path = SubView;
 			sourceTree = "<group>";
@@ -195,11 +198,19 @@
 		61BD71B3220D074B007C8A85 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				61691D5E220B075400512931 /* AppDelegate.swift */,
 				61AD9D87221E083200B16A85 /* Styles */,
 				61770E582214F38400E6641D /* Assets.xcassets */,
-				61691D5E220B075400512931 /* AppDelegate.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		61BDE9ED222050EC007A6ED0 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				61BDE9EE2220512E007A6ED0 /* CustomTextField.swift */,
+			);
+			path = TextField;
 			sourceTree = "<group>";
 		};
 		64D59D7003E052FB93E533FE /* Pods */ = {
@@ -344,6 +355,7 @@
 				61AD9D7A2217849B00B16A85 /* RequestedImage.swift in Sources */,
 				61770E4E2214CEB500E6641D /* StartViewController.swift in Sources */,
 				61AD9D89221E084E00B16A85 /* Styles.swift in Sources */,
+				61BDE9EF2220512E007A6ED0 /* CustomTextField.swift in Sources */,
 				61AD9D8E221E0E4000B16A85 /* MainButton.swift in Sources */,
 				61AD9D782217775E00B16A85 /* ImageTableViewController.swift in Sources */,
 				61AD9D7F221839CB00B16A85 /* ImageManager.swift in Sources */,

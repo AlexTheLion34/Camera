@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		612F21732221A85F00BB1FE2 /* IpValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612F21722221A85F00BB1FE2 /* IpValidator.swift */; };
 		61691D5F220B075400512931 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61691D5E220B075400512931 /* AppDelegate.swift */; };
 		61691D69220B075600512931 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61691D67220B075600512931 /* LaunchScreen.storyboard */; };
 		616AFFA5220E0DAF00B603CB /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616AFFA4220E0DAF00B603CB /* VideoViewController.swift */; };
@@ -21,7 +22,7 @@
 		61AD9D7F221839CB00B16A85 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AD9D7E221839CB00B16A85 /* ImageManager.swift */; };
 		61AD9D842219FC4300B16A85 /* VideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AD9D832219FC4300B16A85 /* VideoManager.swift */; };
 		61AD9D862219FEE000B16A85 /* VideoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AD9D852219FEE000B16A85 /* VideoProvider.swift */; };
-		61AD9D89221E084E00B16A85 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AD9D88221E084E00B16A85 /* Styles.swift */; };
+		61AD9D89221E084E00B16A85 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AD9D88221E084E00B16A85 /* Helpers.swift */; };
 		61AD9D8B221E0BC700B16A85 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AD9D8A221E0BC700B16A85 /* Extensions.swift */; };
 		61AD9D8E221E0E4000B16A85 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AD9D8D221E0E4000B16A85 /* MainButton.swift */; };
 		61BDE9EC22204C71007A6ED0 /* UseIpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BDE9EB22204C71007A6ED0 /* UseIpButton.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		4312963BF3724F1FCB39099B /* Pods-Camera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camera.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Camera/Pods-Camera.debug.xcconfig"; sourceTree = "<group>"; };
+		612F21722221A85F00BB1FE2 /* IpValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IpValidator.swift; sourceTree = "<group>"; };
 		61691D5B220B075400512931 /* Camera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Camera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61691D5E220B075400512931 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61691D68220B075600512931 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,7 +53,7 @@
 		61AD9D7E221839CB00B16A85 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		61AD9D832219FC4300B16A85 /* VideoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoManager.swift; sourceTree = "<group>"; };
 		61AD9D852219FEE000B16A85 /* VideoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoProvider.swift; sourceTree = "<group>"; };
-		61AD9D88221E084E00B16A85 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		61AD9D88221E084E00B16A85 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		61AD9D8A221E0BC700B16A85 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		61AD9D8D221E0E4000B16A85 /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		61BDE9EB22204C71007A6ED0 /* UseIpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseIpButton.swift; sourceTree = "<group>"; };
@@ -73,6 +75,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		612F21742221A97A00BB1FE2 /* IP */ = {
+			isa = PBXGroup;
+			children = (
+				61BDE9F02220BFBF007A6ED0 /* IpReciever.swift */,
+				612F21722221A85F00BB1FE2 /* IpValidator.swift */,
+			);
+			path = IP;
+			sourceTree = "<group>";
+		};
 		61691D52220B075400512931 = {
 			isa = PBXGroup;
 			children = (
@@ -112,7 +123,7 @@
 			children = (
 				61AD9D812219FB5B00B16A85 /* Image */,
 				61AD9D822219FB8100B16A85 /* Video */,
-				61BDE9F02220BFBF007A6ED0 /* IpReciever.swift */,
+				612F21742221A97A00BB1FE2 /* IP */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -180,13 +191,13 @@
 			path = Video;
 			sourceTree = "<group>";
 		};
-		61AD9D87221E083200B16A85 /* Styles */ = {
+		61AD9D87221E083200B16A85 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				61AD9D88221E084E00B16A85 /* Styles.swift */,
+				61AD9D88221E084E00B16A85 /* Helpers.swift */,
 				61AD9D8A221E0BC700B16A85 /* Extensions.swift */,
 			);
-			path = Styles;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		61AD9D8C221E0E1800B16A85 /* Button */ = {
@@ -202,7 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				61691D5E220B075400512931 /* AppDelegate.swift */,
-				61AD9D87221E083200B16A85 /* Styles */,
+				61AD9D87221E083200B16A85 /* Helpers */,
 				61770E582214F38400E6641D /* Assets.xcassets */,
 			);
 			path = Application;
@@ -357,12 +368,13 @@
 				61AD9D862219FEE000B16A85 /* VideoProvider.swift in Sources */,
 				61AD9D7A2217849B00B16A85 /* RequestedImage.swift in Sources */,
 				61770E4E2214CEB500E6641D /* StartViewController.swift in Sources */,
-				61AD9D89221E084E00B16A85 /* Styles.swift in Sources */,
+				61AD9D89221E084E00B16A85 /* Helpers.swift in Sources */,
 				61BDE9EF2220512E007A6ED0 /* CustomTextField.swift in Sources */,
 				61BDE9F12220BFBF007A6ED0 /* IpReciever.swift in Sources */,
 				61AD9D8E221E0E4000B16A85 /* MainButton.swift in Sources */,
 				61AD9D782217775E00B16A85 /* ImageTableViewController.swift in Sources */,
 				61AD9D7F221839CB00B16A85 /* ImageManager.swift in Sources */,
+				612F21732221A85F00BB1FE2 /* IpValidator.swift in Sources */,
 				616AFFA8220E0EF000B603CB /* header.m in Sources */,
 				61AD9D7C2217857700B16A85 /* ImageProvider.swift in Sources */,
 				61AD9D8B221E0BC700B16A85 /* Extensions.swift in Sources */,

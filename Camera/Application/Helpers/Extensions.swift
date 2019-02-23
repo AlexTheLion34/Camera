@@ -20,6 +20,8 @@ extension Colors {
                 return UIColor(displayP3Red: 240 / 255.0, green: 240 / 255.0, blue: 240 / 255.0, alpha: 1)
             case .imageCellBackgroundColor:
                 return UIColor.black.withAlphaComponent(0.2)
+            case .placeholderErrorColor:
+                return UIColor(displayP3Red: 255 / 255.0, green: 128 / 255.0, blue: 128 / 255.0, alpha: 1)
             }
         }
     }

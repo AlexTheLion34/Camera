@@ -41,21 +41,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4HG-CH-DSy">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="690"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KE-cM-jHL" customClass="UseIpButton" customModule="Camera" customModuleProvider="target">
-                                                <rect key="frame" x="61" y="349" width="116" height="50"/>
-                                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="GpM-av-xFo"/>
-                                                    <constraint firstAttribute="width" secondItem="5KE-cM-jHL" secondAttribute="height" multiplier="2:1" constant="16" id="VC4-ls-aCS"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="elV-Sh-avH"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
-                                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Use IP"/>
-                                                <connections>
-                                                    <action selector="useButtonPressed:" destination="5IQ-sY-wEh" eventType="touchUpInside" id="EPv-wH-trQ"/>
-                                                </connections>
-                                            </button>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter IP" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vig-UO-C1L" customClass="CustomTextField" customModule="Camera" customModuleProvider="target">
                                                 <rect key="frame" x="61" y="291" width="253" height="44"/>
                                                 <constraints>
@@ -65,8 +50,8 @@
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wig-sv-ouY" customClass="MainButton" customModule="Camera" customModuleProvider="target">
-                                                <rect key="frame" x="198" y="349" width="116" height="50"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wig-sv-ouY" customClass="MainButton" customModule="Camera" customModuleProvider="target">
+                                                <rect key="frame" x="129" y="343" width="116" height="50"/>
                                                 <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Wig-sv-ouY" secondAttribute="height" multiplier="2:1" constant="16" id="IGW-bO-TWU"/>
@@ -77,7 +62,7 @@
                                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Start"/>
                                                 <connections>
-                                                    <segue destination="nwQ-pv-QAu" kind="show" id="b3v-a9-brJ"/>
+                                                    <segue destination="nwQ-pv-QAu" kind="show" identifier="goToTabBar" id="1sW-T4-Mte"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -85,14 +70,8 @@
                                         <constraints>
                                             <constraint firstItem="vig-UO-C1L" firstAttribute="centerY" secondItem="4HG-CH-DSy" secondAttribute="centerY" constant="-32" id="4Ic-mT-1Xg"/>
                                             <constraint firstItem="vig-UO-C1L" firstAttribute="centerX" secondItem="4HG-CH-DSy" secondAttribute="centerX" id="5c9-2h-tU3"/>
-                                            <constraint firstItem="Wig-sv-ouY" firstAttribute="centerX" secondItem="vig-UO-C1L" secondAttribute="centerX" constant="68.5" id="5yH-Zx-QYN"/>
-                                            <constraint firstItem="5KE-cM-jHL" firstAttribute="width" secondItem="Wig-sv-ouY" secondAttribute="width" id="Bzb-rM-FDW"/>
-                                            <constraint firstItem="5KE-cM-jHL" firstAttribute="height" secondItem="Wig-sv-ouY" secondAttribute="height" id="D01-ao-Xgx"/>
-                                            <constraint firstItem="5KE-cM-jHL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4HG-CH-DSy" secondAttribute="leading" constant="61" id="N08-CF-BAb"/>
-                                            <constraint firstItem="5KE-cM-jHL" firstAttribute="width" secondItem="5KE-cM-jHL" secondAttribute="height" multiplier="2:1" constant="16" id="cQ9-4y-BSj"/>
-                                            <constraint firstItem="5KE-cM-jHL" firstAttribute="top" secondItem="vig-UO-C1L" secondAttribute="bottom" constant="14" id="hrp-VQ-vas"/>
-                                            <constraint firstItem="Wig-sv-ouY" firstAttribute="leading" secondItem="5KE-cM-jHL" secondAttribute="trailing" constant="21" id="mpE-ms-bJs"/>
-                                            <constraint firstItem="Wig-sv-ouY" firstAttribute="top" secondItem="vig-UO-C1L" secondAttribute="bottom" constant="14" id="z3G-hf-umd"/>
+                                            <constraint firstItem="Wig-sv-ouY" firstAttribute="centerX" secondItem="vig-UO-C1L" secondAttribute="centerX" constant="-0.5" id="5yH-Zx-QYN"/>
+                                            <constraint firstItem="Wig-sv-ouY" firstAttribute="top" secondItem="vig-UO-C1L" secondAttribute="bottom" constant="8" id="z3G-hf-umd"/>
                                         </constraints>
                                     </view>
                                 </subviews>

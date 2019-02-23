@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ImageManager: IpReciever {
     
     static let manager = ImageManager()
+    
+    private var realm = try! Realm()
     
     private var url: String = ""
     private var ip: String = ""
@@ -21,12 +24,21 @@ class ImageManager: IpReciever {
     public func addImage() {
         guard let data = try? Data(contentsOf: URL(string: url)!) else {
             return
-
         }
         guard let image = UIImage(data: data) else {
             return
         }
         images.append(RequestedImage(ip: ip, date: calculateDate(), image: image))
+    }
+    
+    public func saveImage(fromIndex index: Int) {
+        try! realm.write {
+            realm.add(images[index])
+        }
+    }
+    // Need to rewrite later
+    public func retrieveImages() {
+        print(realm.objects(RequestedImage.self))
     }
     
     private func calculateDate() -> String {

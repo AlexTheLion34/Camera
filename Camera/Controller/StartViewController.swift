@@ -16,6 +16,7 @@ class StartViewController: UIViewController {
     
     private var imageManager: ImageManager { return .manager }
     private var videManager: VideoManager { return .manager }
+    private var ipValidator: IpValidator { return .validator }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,20 +25,23 @@ class StartViewController: UIViewController {
         registerForKeyboardNotifications()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        startButton.isEnabled = false
-    }
-    
     deinit {
         removeKeyboardNotifications()
     }
     
-    @IBAction func useButtonPressed(_ sender: UIButton) {
-        if ipTextField.text != "" {
-            imageManager.recieveIp(recievedIp: ipTextField.text!)
-            videManager.recieveIp(recievedIp: ipTextField.text!)
-            startButton.isEnabled = true
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == SegueIdentifiers.goToTabBar.rawValue {
+            if ipValidator.validateIp(ip: ipTextField.text!) {
+                imageManager.recieveIp(recievedIp: ipTextField.text!)
+                videManager.recieveIp(recievedIp: ipTextField.text!)
+                return true
+            } else {
+                ipTextField.text = ""
+                ipTextField.attributedPlaceholder = NSAttributedString(string: ApplicationErrors.invalidIp.rawValue, attributes: [NSAttributedString.Key.foregroundColor: Colors.placeholderErrorColor.value])
+                return false
+            }
         }
+        return false
     }
 }
 
@@ -87,6 +91,10 @@ extension StartViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        ipTextField.placeholder = ""
     }
 }
 

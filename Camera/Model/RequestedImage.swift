@@ -6,18 +6,18 @@
 //  Copyright © 2019 Alexey Petrenko. All rights reserved.
 //
 
-// implement it later
-//import RealmSwift
+import RealmSwift
 
-class RequestedImage {
+class RequestedImage: Object {
     
-    let ip: String
-    var date: String
-    var image: UIImage
+    @objc dynamic var ip: String = ""
+    @objc dynamic var date: String = ""
+    @objc dynamic var image: Data = Data()
     
-    init(ip: String, date: String, image: UIImage) {
+    required convenience init(ip: String, date: String, image: UIImage) {
+        self.init()
         self.ip = ip
         self.date = date
-        self.image = image
+        self.image = image.jpegData(compressionQuality: 0.9)!
     }
 }

@@ -13,6 +13,7 @@ enum Colors {
     case buttonColor
     case tableViewBackgroundColor
     case imageCellBackgroundColor
+    case placeholderErrorColor
 }
 
 enum Labels: String {
@@ -30,4 +31,19 @@ enum CellIdentifiers: String {
     case imageCell
 }
 
+enum SegueIdentifiers: String {
+    case goToTabBar
+}
+
+enum SaveAlert: String {
+    case title = "Save image"
+    case message = "Would you like to save this image?"
+    case yesAction = "Yes"
+    case noAction = "No"
+    case notification = "alert"
+}
+
+enum ApplicationErrors: String {
+    case invalidIp = "Invalid IP!"
+}
 

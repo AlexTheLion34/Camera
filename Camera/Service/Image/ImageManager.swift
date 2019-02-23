@@ -20,7 +20,7 @@ class ImageManager: IpReciever {
     
     public var images = [RequestedImage]()
     
-    // try to solve it with AlamofireImage later
+    // FIXME: add timeout if there isnt any response and show alert with error
     public func addImage() {
         guard let data = try? Data(contentsOf: URL(string: url)!) else {
             return
@@ -36,7 +36,7 @@ class ImageManager: IpReciever {
             realm.add(images[index])
         }
     }
-    // Need to rewrite later
+    // TODO: Need to rewrite later
     public func retrieveImages() {
         print(realm.objects(RequestedImage.self))
     }

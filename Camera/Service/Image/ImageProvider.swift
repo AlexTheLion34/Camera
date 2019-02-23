@@ -26,8 +26,8 @@ extension ImageProvider: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.imageCell.rawValue, for: indexPath) as! ImageTableViewCell
         if (imageManager.images.count != 0) {
             cell.jpgImageView.image = UIImage(data: imageManager.images[indexPath.row].image)
-            cell.ipLabel.text = Labels.ip.rawValue + imageManager.images[indexPath.row].ip
-            cell.dateLabel.text = Labels.date.rawValue + imageManager.images[indexPath.row].date
+            cell.ipLabel.text = Labels.ip.value + imageManager.images[indexPath.row].ip
+            cell.dateLabel.text = Labels.date.value + imageManager.images[indexPath.row].date
         }
         return cell
     }
@@ -37,12 +37,12 @@ extension ImageProvider: UITableViewDataSource {
 extension ImageProvider: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let alertController = UIAlertController(title: SaveAlert.title.rawValue, message: SaveAlert.message.rawValue, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: SaveAlert.yesAction.rawValue, style: .default) { (action: UIAlertAction) in
+        let alertController = UIAlertController(title: SaveAlert.title.value, message: SaveAlert.message.value, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: SaveAlert.yesAction.value, style: .default) { (action: UIAlertAction) in
             self.imageManager.saveImage(fromIndex: indexPath.row)
         })
-        alertController.addAction(UIAlertAction(title: SaveAlert.noAction.rawValue, style: .default, handler: nil))
-        NotificationCenter.default.post(name: NSNotification.Name.init(SaveAlert.notification.rawValue), object: nil, userInfo: [SaveAlert.notification.rawValue: alertController])
+        alertController.addAction(UIAlertAction(title: SaveAlert.noAction.value, style: .default, handler: nil))
+        NotificationCenter.default.post(name: NSNotification.Name.init(SaveAlert.notification.value), object: nil, userInfo: [SaveAlert.notification.value: alertController])
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

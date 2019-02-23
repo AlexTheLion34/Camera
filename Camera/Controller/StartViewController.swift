@@ -37,7 +37,7 @@ class StartViewController: UIViewController {
                 return true
             } else {
                 ipTextField.text = ""
-                ipTextField.attributedPlaceholder = NSAttributedString(string: ApplicationErrors.invalidIp.rawValue, attributes: [NSAttributedString.Key.foregroundColor: Colors.placeholderErrorColor.value])
+                ipTextField.attributedPlaceholder = NSAttributedString(string: ApplicationErrors.invalidIp.value, attributes: [NSAttributedString.Key.foregroundColor: Colors.placeholderErrorColor.value])
                 return false
             }
         }
@@ -51,7 +51,7 @@ extension StartViewController {
     private func setupNavigationBar() {
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.barTintColor = Colors.barColor.value
-        navigationController?.navigationBar.topItem?.title = BarTitles.setup.rawValue
+        navigationController?.navigationBar.topItem?.title = BarTitles.setup.value
         navigationController?.navigationBar.tintColor = .white
         navigationController?.navigationBar.barStyle = .black
     }

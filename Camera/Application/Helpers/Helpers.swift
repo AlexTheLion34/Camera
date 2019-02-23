@@ -16,15 +16,15 @@ enum Colors {
     case placeholderErrorColor
 }
 
-enum Labels: String {
-    case ip = "IP: "
-    case date = "Date/Time: "
+enum Labels {
+    case ip
+    case date
 }
 
-enum BarTitles: String {
-    case setup = "Setup"
-    case images = "Images"
-    case stream = "Stream"
+enum BarTitles {
+    case setup
+    case images
+    case stream
 }
 
 enum CellIdentifiers: String {
@@ -35,15 +35,15 @@ enum SegueIdentifiers: String {
     case goToTabBar
 }
 
-enum SaveAlert: String {
-    case title = "Save image"
-    case message = "Would you like to save this image?"
-    case yesAction = "Yes"
-    case noAction = "No"
-    case notification = "alert"
+enum SaveAlert {
+    case title
+    case message
+    case yesAction
+    case noAction
+    case notification
 }
 
-enum ApplicationErrors: String {
-    case invalidIp = "Invalid IP!"
+enum ApplicationErrors  {
+    case invalidIp
 }
 

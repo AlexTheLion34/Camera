@@ -26,3 +26,62 @@ extension Colors {
         }
     }
 }
+
+extension Labels {
+    var value: String {
+        get {
+            switch self {
+            case .date:
+                return "Date/Time: "
+            case .ip:
+                return "IP: "
+            }
+        }
+    }
+}
+
+extension BarTitles {
+    var value: String {
+        get {
+            switch self {
+            case .setup:
+                return "Setup"
+            case .images:
+                return "Images"
+            case .stream:
+                return "Stream"
+            }
+        }
+    }
+}
+
+extension SaveAlert {
+    var value: String {
+        get {
+            switch self {
+            case .title:
+                return "Save image"
+            case .message:
+                return "Would you like to save this image?"
+            case .yesAction:
+                return "Yes"
+            case .noAction:
+                return "No"
+            case .notification:
+                return "alert"
+            }
+        }
+    }
+}
+
+extension ApplicationErrors {
+    var value: String {
+        get {
+            switch self {
+            case .invalidIp:
+                return "Invalid IP!"
+            }
+        }
+    }
+}
+

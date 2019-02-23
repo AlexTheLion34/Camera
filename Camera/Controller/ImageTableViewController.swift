@@ -25,7 +25,7 @@ class ImageTableViewController: UITableViewController {
     
     @objc private func showAllert(notification: Notification) {
         guard let userinfo = notification.userInfo else { return }
-        let alertController = userinfo["alert"] as! UIAlertController
+        let alertController = userinfo[SaveAlert.notification.value] as! UIAlertController
         self.present(alertController, animated: true, completion: nil)
     }
 }
@@ -37,7 +37,7 @@ extension ImageTableViewController {
         self.tableView.dataSource = imageProvider
         self.tableView.delegate = imageProvider
         configureTableView()
-        NotificationCenter.default.addObserver(self, selector: #selector(showAllert(notification:)), name: NSNotification.Name.init(SaveAlert.notification.rawValue), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(showAllert(notification:)), name: NSNotification.Name.init(SaveAlert.notification.value), object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {

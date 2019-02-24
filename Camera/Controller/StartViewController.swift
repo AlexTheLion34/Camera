@@ -20,9 +20,12 @@ class StartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationBar()
         setupTextField()
         registerForKeyboardNotifications()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setupNavigationBar()
     }
     
     deinit {
@@ -43,6 +46,10 @@ class StartViewController: UIViewController {
         }
         return false
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.topViewController?.navigationItem.rightBarButtonItem = nil
+    }
 }
 
 // MARK: - NavigationBar settings
@@ -54,6 +61,13 @@ extension StartViewController {
         navigationController?.navigationBar.topItem?.title = BarTitles.setup.value
         navigationController?.navigationBar.tintColor = .white
         navigationController?.navigationBar.barStyle = .black
+        let viewGalleryitem = UIBarButtonItem(image: UIImage(named: "gallery"), style: .done, target: self, action: #selector(showGallery))
+        navigationController?.topViewController?.navigationItem.rightBarButtonItem = viewGalleryitem
+    }
+    
+    @objc private func showGallery() {
+        guard let galleryViewController = ImageGalleryViewController.storyboardInstance() else { return }
+        navigationController?.pushViewController(galleryViewController, animated: true)
     }
 }
 

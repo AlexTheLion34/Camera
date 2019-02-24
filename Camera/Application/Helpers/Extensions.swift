@@ -55,6 +55,25 @@ extension BarTitles {
     }
 }
 
+extension GalleryImageCellConstants {
+    var value: CGFloat {
+        get {
+            switch self {
+            case .left:
+                return 10.0
+            case .right:
+                return 10.0
+            case .spacing:
+                return 10.0
+            case .width:
+                return (UIScreen.main.bounds.width - GalleryImageCellConstants.left.value - GalleryImageCellConstants.spacing.value)
+            case .height:
+                return 224.0
+            }
+        }
+    }
+}
+
 extension SaveAlert {
     var value: String {
         get {

@@ -29,6 +29,7 @@ enum BarTitles {
 
 enum CellIdentifiers: String {
     case imageCell
+    case galleryCollectionCell
 }
 
 enum SegueIdentifiers: String {
@@ -45,5 +46,6 @@ enum SaveAlert {
 
 enum ApplicationErrors  {
     case invalidIp
+    case initNotImplemented
 }
 

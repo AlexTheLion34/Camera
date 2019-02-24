@@ -37,8 +37,13 @@ class ImageManager: IpReciever {
         }
     }
     // TODO: Need to rewrite later
-    public func retrieveImages() {
-        print(realm.objects(RequestedImage.self))
+    public func retrieveImages() -> [RequestedImage] {
+        let retrievedImages = realm.objects(RequestedImage.self)
+        var result = [RequestedImage]()
+        for image in retrievedImages {
+            result.append(image)
+        }
+        return result
     }
     
     private func calculateDate() -> String {

@@ -33,6 +33,6 @@ extension GalleryImageProvider: UICollectionViewDataSource {
 extension GalleryImageProvider: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 347, height: 224)
+        return CGSize(width: GalleryImageCellConstants.width.value, height: GalleryImageCellConstants.height.value)
     }
 }

@@ -27,6 +27,14 @@ enum BarTitles {
     case stream
 }
 
+enum GalleryImageCellConstants {
+    case left
+    case right
+    case spacing
+    case width
+    case height
+}
+
 enum CellIdentifiers: String {
     case imageCell
     case galleryCollectionCell

@@ -20,8 +20,7 @@ class ImageTableViewController: UITableViewController {
     
     private func setupNavigationItem() {
         let addItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonPressed))
-        let viewGalleryitem = UIBarButtonItem(image: UIImage(named: "gallery"), style: .done, target: self, action: #selector(showGallery))
-        navigationController?.topViewController?.navigationItem.rightBarButtonItems = [viewGalleryitem, addItem]
+        navigationController?.topViewController?.navigationItem.rightBarButtonItem = addItem
         navigationController?.topViewController?.navigationItem.title = BarTitles.images.value
     }
     
@@ -34,11 +33,6 @@ class ImageTableViewController: UITableViewController {
         guard let userinfo = notification.userInfo else { return }
         let alertController = userinfo[SaveAlert.notification.value] as! UIAlertController
         self.present(alertController, animated: true, completion: nil)
-    }
-    
-    @objc private func showGallery() {
-        let galleryViewController = ImageGalleryViewController.storyboardInstance()
-        navigationController?.pushViewController(galleryViewController!, animated: true)
     }
 }
 

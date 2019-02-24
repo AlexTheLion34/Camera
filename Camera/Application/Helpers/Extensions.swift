@@ -80,6 +80,8 @@ extension ApplicationErrors {
             switch self {
             case .invalidIp:
                 return "Invalid IP!"
+            case .initNotImplemented:
+                return "init(coder:) has not been implemented"
             }
         }
     }

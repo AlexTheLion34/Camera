@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		612F21732221A85F00BB1FE2 /* IpValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612F21722221A85F00BB1FE2 /* IpValidator.swift */; };
+		6143A0D12222ECFD00613F35 /* ImageGallery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6143A0D02222ECFD00613F35 /* ImageGallery.storyboard */; };
+		6143A0D32222EF9500613F35 /* ImageGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6143A0D22222EF9500613F35 /* ImageGalleryViewController.swift */; };
+		6143A0D62222F83800613F35 /* GalleryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6143A0D52222F83800613F35 /* GalleryCollectionView.swift */; };
+		6143A0D8222300B200613F35 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6143A0D7222300B200613F35 /* GalleryCollectionViewCell.swift */; };
+		6143A0DA2223171500613F35 /* GalleryImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6143A0D92223171400613F35 /* GalleryImageProvider.swift */; };
 		61691D5F220B075400512931 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61691D5E220B075400512931 /* AppDelegate.swift */; };
 		61691D69220B075600512931 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61691D67220B075600512931 /* LaunchScreen.storyboard */; };
 		616AFFA5220E0DAF00B603CB /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616AFFA4220E0DAF00B603CB /* VideoViewController.swift */; };
@@ -34,6 +39,11 @@
 /* Begin PBXFileReference section */
 		4312963BF3724F1FCB39099B /* Pods-Camera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camera.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Camera/Pods-Camera.debug.xcconfig"; sourceTree = "<group>"; };
 		612F21722221A85F00BB1FE2 /* IpValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IpValidator.swift; sourceTree = "<group>"; };
+		6143A0D02222ECFD00613F35 /* ImageGallery.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageGallery.storyboard; sourceTree = "<group>"; };
+		6143A0D22222EF9500613F35 /* ImageGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGalleryViewController.swift; sourceTree = "<group>"; };
+		6143A0D52222F83800613F35 /* GalleryCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionView.swift; sourceTree = "<group>"; };
+		6143A0D7222300B200613F35 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
+		6143A0D92223171400613F35 /* GalleryImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryImageProvider.swift; sourceTree = "<group>"; };
 		61691D5B220B075400512931 /* Camera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Camera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61691D5E220B075400512931 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61691D68220B075600512931 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -82,6 +92,14 @@
 				612F21722221A85F00BB1FE2 /* IpValidator.swift */,
 			);
 			path = IP;
+			sourceTree = "<group>";
+		};
+		6143A0D42222F80200613F35 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				6143A0D52222F83800613F35 /* GalleryCollectionView.swift */,
+			);
+			path = Collection;
 			sourceTree = "<group>";
 		};
 		61691D52220B075400512931 = {
@@ -133,6 +151,7 @@
 			children = (
 				61770E4D2214CEB500E6641D /* StartViewController.swift */,
 				61AD9D772217775E00B16A85 /* ImageTableViewController.swift */,
+				6143A0D22222EF9500613F35 /* ImageGalleryViewController.swift */,
 				616AFFA4220E0DAF00B603CB /* VideoViewController.swift */,
 			);
 			path = Controller;
@@ -142,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				61770E512214E19600E6641D /* Main.storyboard */,
+				6143A0D02222ECFD00613F35 /* ImageGallery.storyboard */,
 				61691D67220B075600512931 /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -159,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				616B666D220CDE4300599C0B /* ImageTableViewCell.swift */,
+				6143A0D7222300B200613F35 /* GalleryCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -166,6 +187,7 @@
 		61AD9D802219C3EB00B16A85 /* SubView */ = {
 			isa = PBXGroup;
 			children = (
+				6143A0D42222F80200613F35 /* Collection */,
 				61AD9D7D22178C5C00B16A85 /* Cell */,
 				61AD9D8C221E0E1800B16A85 /* Button */,
 				61BDE9ED222050EC007A6ED0 /* TextField */,
@@ -178,6 +200,7 @@
 			children = (
 				61AD9D7B2217857700B16A85 /* ImageProvider.swift */,
 				61AD9D7E221839CB00B16A85 /* ImageManager.swift */,
+				6143A0D92223171400613F35 /* GalleryImageProvider.swift */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -308,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61691D69220B075600512931 /* LaunchScreen.storyboard in Resources */,
+				6143A0D12222ECFD00613F35 /* ImageGallery.storyboard in Resources */,
 				61770E592214F38400E6641D /* Assets.xcassets in Resources */,
 				61770E532214E19600E6641D /* Main.storyboard in Resources */,
 			);
@@ -370,6 +394,7 @@
 				61770E4E2214CEB500E6641D /* StartViewController.swift in Sources */,
 				61AD9D89221E084E00B16A85 /* Helpers.swift in Sources */,
 				61BDE9EF2220512E007A6ED0 /* CustomTextField.swift in Sources */,
+				6143A0D32222EF9500613F35 /* ImageGalleryViewController.swift in Sources */,
 				61BDE9F12220BFBF007A6ED0 /* IpReciever.swift in Sources */,
 				61AD9D8E221E0E4000B16A85 /* MainButton.swift in Sources */,
 				61AD9D782217775E00B16A85 /* ImageTableViewController.swift in Sources */,
@@ -377,11 +402,14 @@
 				612F21732221A85F00BB1FE2 /* IpValidator.swift in Sources */,
 				616AFFA8220E0EF000B603CB /* header.m in Sources */,
 				61AD9D7C2217857700B16A85 /* ImageProvider.swift in Sources */,
+				6143A0DA2223171500613F35 /* GalleryImageProvider.swift in Sources */,
+				6143A0D62222F83800613F35 /* GalleryCollectionView.swift in Sources */,
 				61AD9D8B221E0BC700B16A85 /* Extensions.swift in Sources */,
 				616B666E220CDE4300599C0B /* ImageTableViewCell.swift in Sources */,
 				61AD9D842219FC4300B16A85 /* VideoManager.swift in Sources */,
 				616AFFA5220E0DAF00B603CB /* VideoViewController.swift in Sources */,
 				61691D5F220B075400512931 /* AppDelegate.swift in Sources */,
+				6143A0D8222300B200613F35 /* GalleryCollectionViewCell.swift in Sources */,
 				61BDE9EC22204C71007A6ED0 /* UseIpButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

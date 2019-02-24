@@ -18,6 +18,13 @@ class ImageTableViewController: UITableViewController {
         self.tableView.backgroundColor = Colors.tableViewBackgroundColor.value
     }
     
+    private func setupNavigationItem() {
+        let addItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonPressed))
+        let viewGalleryitem = UIBarButtonItem(image: UIImage(named: "gallery"), style: .done, target: self, action: #selector(showGallery))
+        navigationController?.topViewController?.navigationItem.rightBarButtonItems = [viewGalleryitem, addItem]
+        navigationController?.topViewController?.navigationItem.title = BarTitles.images.value
+    }
+    
     @objc private func addButtonPressed() {
         imageManager.addImage()
         self.tableView.reloadData()
@@ -27,6 +34,11 @@ class ImageTableViewController: UITableViewController {
         guard let userinfo = notification.userInfo else { return }
         let alertController = userinfo[SaveAlert.notification.value] as! UIAlertController
         self.present(alertController, animated: true, completion: nil)
+    }
+    
+    @objc private func showGallery() {
+        let galleryViewController = ImageGalleryViewController.storyboardInstance()
+        navigationController?.pushViewController(galleryViewController!, animated: true)
     }
 }
 
@@ -41,11 +53,11 @@ extension ImageTableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.topViewController?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonPressed))
+        setupNavigationItem()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        navigationController?.topViewController?.navigationItem.rightBarButtonItem = nil
+        navigationController?.topViewController?.navigationItem.rightBarButtonItems = nil
     }
 }
 

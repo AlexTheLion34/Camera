@@ -30,20 +30,11 @@ class VideoViewController: UIViewController {
     
     @IBAction func sliderDIdSlide(_ sender: UISlider) {
         sender.isContinuous = false
-        request(videManager.zoomURL + "zoom=\(sender.value)", method: .get)
+        videManager.zoom(withMultiplier: sender.value)
     }
     
     @IBAction func buttonPressed(_ sender: UIButton) {
-        switch sender.tag {
-        case 1:
-            request(videManager.zoomURL + "move=up", method: .get)
-        case 2:
-            request(videManager.zoomURL + "move=right", method: .get)
-        case 3:
-            request(videManager.zoomURL + "move=down", method: .get)
-        default:
-            request(videManager.zoomURL + "move=left", method: .get)
-        }
+        videManager.moveInDirection(withId: sender.tag)
     }
 }
 

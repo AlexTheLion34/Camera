@@ -33,6 +33,7 @@
 		61BDE9EC22204C71007A6ED0 /* UseIpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BDE9EB22204C71007A6ED0 /* UseIpButton.swift */; };
 		61BDE9EF2220512E007A6ED0 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BDE9EE2220512E007A6ED0 /* CustomTextField.swift */; };
 		61BDE9F12220BFBF007A6ED0 /* IpReciever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BDE9F02220BFBF007A6ED0 /* IpReciever.swift */; };
+		61E0C2C722281C2D009B958B /* VideoSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E0C2C622281C2D009B958B /* VideoSettingsViewController.swift */; };
 		DCA73C8AE7793683964A0BFA /* Pods_Camera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4BFD10D4A741AB0B9E2D068 /* Pods_Camera.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		61BDE9EB22204C71007A6ED0 /* UseIpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseIpButton.swift; sourceTree = "<group>"; };
 		61BDE9EE2220512E007A6ED0 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		61BDE9F02220BFBF007A6ED0 /* IpReciever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IpReciever.swift; sourceTree = "<group>"; };
+		61E0C2C622281C2D009B958B /* VideoSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSettingsViewController.swift; sourceTree = "<group>"; };
 		7FF6BC2A92905387193483FC /* Pods-Camera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camera.release.xcconfig"; path = "Pods/Target Support Files/Pods-Camera/Pods-Camera.release.xcconfig"; sourceTree = "<group>"; };
 		E4BFD10D4A741AB0B9E2D068 /* Pods_Camera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Camera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -152,6 +154,7 @@
 				61770E4D2214CEB500E6641D /* StartViewController.swift */,
 				61AD9D772217775E00B16A85 /* ImageTableViewController.swift */,
 				6143A0D22222EF9500613F35 /* ImageGalleryViewController.swift */,
+				61E0C2C622281C2D009B958B /* VideoSettingsViewController.swift */,
 				616AFFA4220E0DAF00B603CB /* VideoViewController.swift */,
 			);
 			path = Controller;
@@ -398,6 +401,7 @@
 				61BDE9F12220BFBF007A6ED0 /* IpReciever.swift in Sources */,
 				61AD9D8E221E0E4000B16A85 /* MainButton.swift in Sources */,
 				61AD9D782217775E00B16A85 /* ImageTableViewController.swift in Sources */,
+				61E0C2C722281C2D009B958B /* VideoSettingsViewController.swift in Sources */,
 				61AD9D7F221839CB00B16A85 /* ImageManager.swift in Sources */,
 				612F21732221A85F00BB1FE2 /* IpValidator.swift in Sources */,
 				616AFFA8220E0EF000B603CB /* header.m in Sources */,

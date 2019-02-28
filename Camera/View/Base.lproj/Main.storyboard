@@ -185,41 +185,58 @@
         <!--Stream-->
         <scene sceneID="gFb-IO-MG9">
             <objects>
-                <viewController id="5er-Fz-zPg" sceneMemberID="viewController">
+                <viewController id="5er-Fz-zPg" customClass="VideoSettingsViewController" customModule="Camera" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iFT-ZN-W59">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRg-4e-xzd" customClass="MainButton" customModule="Camera" customModuleProvider="target">
-                                <rect key="frame" x="137.66666666666666" y="383.66666666666669" width="100" height="50"/>
-                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="0fy-Eu-DCK"/>
-                                    <constraint firstAttribute="height" constant="50" id="Rah-2h-Ior"/>
-                                    <constraint firstAttribute="width" secondItem="eRg-4e-xzd" secondAttribute="height" multiplier="2:1" id="hjw-4t-mEK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
-                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Stream"/>
-                                <connections>
-                                    <segue destination="Kwf-Pi-oHC" kind="show" id="rLj-le-hXD"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="XcK-he-IAd">
+                                <rect key="frame" x="27.666666666666657" y="235.66666666666663" width="320" height="346"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chose speed of zoom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ns-Ab-d5Z">
+                                        <rect key="frame" x="24.333333333333343" y="0.0" width="271" height="36"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="ijr-0Q-Ems">
+                                        <rect key="frame" x="0.0" y="54.000000000000028" width="320" height="292"/>
+                                        <subviews>
+                                            <pickerView contentMode="scaleToFill" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="Q6K-yB-FZU">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
+                                            </pickerView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRg-4e-xzd" customClass="MainButton" customModule="Camera" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="249.99999999999994" width="320" height="42"/>
+                                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
+                                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Stream"/>
+                                                <connections>
+                                                    <segue destination="Kwf-Pi-oHC" kind="show" id="rLj-le-hXD"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="eRg-4e-xzd" firstAttribute="centerY" secondItem="qjT-OZ-Asx" secondAttribute="centerY" id="ZuF-ZG-tt1"/>
-                            <constraint firstItem="eRg-4e-xzd" firstAttribute="centerX" secondItem="qjT-OZ-Asx" secondAttribute="centerX" id="xrF-uP-Pb8"/>
+                            <constraint firstItem="XcK-he-IAd" firstAttribute="centerX" secondItem="qjT-OZ-Asx" secondAttribute="centerX" id="KBD-B1-Sc2"/>
+                            <constraint firstItem="XcK-he-IAd" firstAttribute="centerY" secondItem="qjT-OZ-Asx" secondAttribute="centerY" id="Xqg-DS-GXW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qjT-OZ-Asx"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Stream" image="video" id="o2D-lv-t1C">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="speedZoomPickerView" destination="Q6K-yB-FZU" id="unv-nD-ral"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HQu-14-LIa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2470" y="1067"/>
+            <point key="canvasLocation" x="2469.5999999999999" y="1066.9950738916257"/>
         </scene>
         <!--Video-->
         <scene sceneID="vxa-UF-UHg">

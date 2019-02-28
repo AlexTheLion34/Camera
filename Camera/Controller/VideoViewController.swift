@@ -16,7 +16,7 @@ class VideoViewController: UIViewController {
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     private var videoProvider: VideoProvider { return .provider }
-    private var videManager: VideoManager { return .manager }
+    private var videoManager: VideoManager { return .manager }
     
     private func checkOrientation() {
         if UIDevice.current.orientation.isLandscape {
@@ -30,11 +30,11 @@ class VideoViewController: UIViewController {
     
     @IBAction func sliderDIdSlide(_ sender: UISlider) {
         sender.isContinuous = false
-        videManager.zoom(withMultiplier: sender.value)
+        videoManager.zoom(withMultiplier: sender.value)
     }
     
     @IBAction func buttonPressed(_ sender: UIButton) {
-        videManager.moveInDirection(withId: sender.tag)
+        videoManager.moveInDirection(withId: sender.tag)
     }
 }
 
@@ -46,8 +46,6 @@ extension VideoViewController {
         checkOrientation()
         setupNavigationBar()
         videoProvider.configurePlayer(withView: videoView)
-        // FIXME: remove it later
-        request(videManager.zoomURL + "speed=\(100)", method: .get)
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -61,6 +59,6 @@ extension VideoViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        videManager.player.stop()
+        videoManager.player.stop()
     }
 }

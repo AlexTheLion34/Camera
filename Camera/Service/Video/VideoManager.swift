@@ -14,7 +14,8 @@ class VideoManager: IpReciever {
     static let manager = VideoManager()
     
     private var streamURL: String = ""
-    public var zoomURL: String = ""
+    private var zoomURL: String = ""
+    private var speedURL: String = ""
     public var player: VLCMediaPlayer = VLCMediaPlayer()
     
     func setupMedia() {
@@ -24,6 +25,7 @@ class VideoManager: IpReciever {
     public func recieveIp(recievedIp: String) {
         streamURL = "http://" + recievedIp + "/axis-cgi/mjpg/video.cgi"
         zoomURL = "http://" + recievedIp + "/axis-cgi/com/ptz.cgi?"
+        speedURL = zoomURL
     }
     
     public func moveInDirection(withId id: Int) {
@@ -41,5 +43,9 @@ class VideoManager: IpReciever {
     
     public func zoom(withMultiplier multiplier: Float) {
         request(zoomURL + "zoom=\(multiplier)", method: .get)
+    }
+    
+    public func setupSpeed(withSpeed speed: String) {
+        request(speedURL + "speed=" + speed, method: .get)
     }
 }

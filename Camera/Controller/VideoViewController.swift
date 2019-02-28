@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import Alamofire
 
 class VideoViewController: UIViewController {
 
     @IBOutlet weak var videoView: UIView!
+    
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     private var videoProvider: VideoProvider { return .provider }
     private var videManager: VideoManager { return .manager }
@@ -24,6 +27,24 @@ class VideoViewController: UIViewController {
     private func setupNavigationBar() {
         navigationController?.navigationBar.topItem?.title = ""
     }
+    
+    @IBAction func sliderDIdSlide(_ sender: UISlider) {
+        sender.isContinuous = false
+        request(videManager.zoomURL + "zoom=\(sender.value)", method: .get)
+    }
+    
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        switch sender.tag {
+        case 1:
+            request(videManager.zoomURL + "move=up", method: .get)
+        case 2:
+            request(videManager.zoomURL + "move=right", method: .get)
+        case 3:
+            request(videManager.zoomURL + "move=down", method: .get)
+        default:
+            request(videManager.zoomURL + "move=left", method: .get)
+        }
+    }
 }
 
 extension VideoViewController {
@@ -34,13 +55,17 @@ extension VideoViewController {
         checkOrientation()
         setupNavigationBar()
         videoProvider.configurePlayer(withView: videoView)
+        // FIXME: remove it later
+        request(videManager.zoomURL + "speed=\(100)", method: .get)
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         if UIDevice.current.orientation.isLandscape {
             self.navigationController?.navigationBar.isHidden = true
+            bottomConstraint.constant = 210.0
         } else {
             self.navigationController?.navigationBar.isHidden = false
+            bottomConstraint.constant = 0.0
         }
     }
     
